@@ -44,7 +44,7 @@
           <label for="L'invité qui recupére la bouteille pas ouverte"
             >L'invité qui recupére la bouteille pas ouverte</label
           >
-          <button>Voir le résultat</button>
+          <button class="bouton-result">Voir le résultat</button>
         </div>
       </div>
       <div id="publicite">
@@ -166,12 +166,38 @@ export default {
   text-align: center;
   cursor: pointer;
 }
+
 .btn-inscription {
   background-color: #11174a;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 8px;
+  margin-bottom: 5px;
 }
-.btn-inscription a {
+.btn-inscription .link {
   text-decoration: none;
-  text-align: center;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.link:hover {
+  color: #e55812;
+}
+.bouton-result {
+  background-color: #11174a;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 8px;
+  margin-bottom: 5px;
+  color: white;
+  cursor: pointer;
+  justify-content: center;
+  margin-left: 115px;
+  margin-top: 5px;
+}
+
+.bouton-result:hover {
+  color: #e55812;
 }
 
 .link:hover {

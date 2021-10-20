@@ -1,6 +1,7 @@
 <template>
   <button class="neutral-button" @click="addNeutral">
-    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> {{ this.neutral }} Aff
+    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> {{ this.neutral }} Pas
+    grave
   </button>
 </template>
 

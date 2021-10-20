@@ -5,7 +5,7 @@
         <div class="under" @click="consultProfil">
           <h4>Publié par {{ authorP }}</h4>
         </div>
-        <h4>{{ dateP }}</h4>
+        <h4>{{ dateP.substr(0, 10) }}</h4>
         <div>
           <h4>{{ categP }}</h4>
         </div>
@@ -15,16 +15,19 @@
         <p>
           {{ contentP }}
         </p>
+        <div><img class="imgclass" :src="imgP" /></div>
       </div>
     </div>
 
     <div class="partie-deux">
-      <div>
+      <div class="reactions-post">
         <dislikeButton :initalDislikes="likesP" :postId="postId" />
         <!-- :initalDislikes="0" <p>Dislikes: {{ likesP }} Neutral: {{ neutralP }}</p>-->
         <Neutralbtn :initalNeutral="neutralP" :postId="postId" />
       </div>
-      <NewComment :postId="postId" />
+      <div class="newcomment">
+        <NewComment :postId="postId" />
+      </div>
     </div>
     <p>Commentaires :</p>
     <div class="comments">
@@ -36,7 +39,7 @@
         >
           {{ comment.content }}
           <br />
-          {{ comment.firstname }} {{ comment.lastname }}
+          User: {{ comment.firstname }} {{ comment.lastname }}
           <br />
 
           Likes: {{ comment.likes.length }}
@@ -69,6 +72,7 @@ export default {
     postId: String,
     dateP: String,
     userId: String,
+    imgP: String,
   },
   methods: {
     async consultProfil() {
@@ -83,7 +87,7 @@ export default {
 <style>
 .bloc-post {
   width: 99%;
-  height: 300px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -110,6 +114,9 @@ export default {
   text-decoration: none;
   margin: 0px;
 }
+.reactions-post {
+  margin-left: 50px;
+}
 p {
   padding-left: 20px;
   color: #2b2d42;
@@ -126,21 +133,26 @@ p {
 .partie-deux {
   display: flex;
   flex-direction: Row;
-  align-items: center;
-  justify-content: space-around;
 }
 .comments {
   margin-left: 10px;
-  padding: 10px;
-  width: 80%;
+  padding: 2px;
+  width: 90%;
   border-radius: 5px;
-  background-color: #b8b9caa6;
+  background-color: #b8b9ca80;
   color: rgba(0, 0, 0, 0.924);
   font-size: medium;
   overflow: scroll;
 }
 
 .comment-un {
-  height: 100px;
+  height: 60px;
+}
+.imgclass {
+  width: 200px;
+  height: 150px;
+  margin-left: 30%;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 </style>

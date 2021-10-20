@@ -17,17 +17,19 @@
       <a class="text" href="">Copyright@ 2021</a>
     </div>
     <div class="footBar-item">
-      <a class="link" href="">RGPD</a>
-      <a class="link" href="">A propos</a>
-      <a class="link" href="">Publicités</a>
-      <a class="link" href="">Politique de confidentialité</a>
+      <router-link to="/Apropos">
+        <a class="link" href="">RGPD</a>
+        <a class="link" href="">A propos</a>
+        <a class="link" href="">Publicités</a>
+        <a class="link" href="">Politique de confidentialité</a></router-link
+      >
     </div>
   </div>
 </template>
 <style scoped>
 #footBar {
   height: 50px;
-  position: absolute;
+  position: relative;
   bottom: 1px;
   right: 5px;
   left: 5px;

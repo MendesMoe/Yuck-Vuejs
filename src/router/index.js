@@ -6,6 +6,7 @@ import Home from "../views/Home.vue";
 import EditProfil from "../views/EditProfil.vue";
 import Deconnexion from "../views/Deconnexion.vue";
 import recupIDPage from "../views/recupIDPage.vue";
+import Apropos from "../views/Apropos.vue";
 
 const routes = [
   {
@@ -43,6 +44,11 @@ const routes = [
     name: "recupIDPage",
     component: recupIDPage,
     props: true,
+  },
+  {
+    path: "/Apropos",
+    name: "Apropos",
+    component: Apropos,
   },
 ];
 

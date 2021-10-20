@@ -42,21 +42,21 @@
           :neutralP="item.neutralReactions.length"
           :dateP="item.date"
           :userId="item.userId"
+          :imgP="item.imageUrl"
         />
       </div>
     </div>
     <div class="partie-droite">
       <div class="inscris">
         <p>
-          Mauvaises manières, vilaines habitudes et manies gênantes... <br />
-          Parfois on vit des situations que nous donnent envie de dire Beurk !
-          Ou encore : Yuck !<br />
-          Dans tout le cas, partage ton Yuck et tu veras que, au moins, tu n'est
-          pas la seule !
+          Mauvaises manières, vilaines habitudes et manies gênantes... Parfois
+          on vit des situations que nous donnent envie de dire Beurk. Ou encore
+          : Yuck !<br />
+          Partage ton Yuck et tu verras que, au moins, tu n'es pas la seule !
         </p>
         <button class="btn-inscription">
           <router-link class="link" href="" to="/RegisterPage">
-            <br />Créer un compte</router-link
+            Créer un compte</router-link
           >
         </button>
       </div>
@@ -84,16 +84,11 @@
           <label for="L'invité qui recupére la bouteille pas ouverte"
             >L'invité qui recupére la bouteille pas ouverte</label
           >
-          <button>Voir le résultat</button>
+          <button class="bouton-result">Voir le résultat</button>
         </div>
       </div>
       <div id="publicite">
-        <img
-          width="90%"
-          height="400"
-          src="https://i.pinimg.com/originals/94/fa/f1/94faf1da5da84d63220f8377f9c5f094.gif"
-          alt="pub"
-        />
+        <img src="@/assets/pubpubpub.gif" alt="pub" />
       </div>
     </div>
   </div>
@@ -177,7 +172,7 @@ export default {
 }
 .posts {
   width: 90%;
-  height: 600px;
+  height: 730px;
   border-radius: 9px;
   margin-top: 2%;
   margin-left: 5%;
@@ -192,6 +187,7 @@ export default {
   background-color: rgba(255, 255, 255, 0.911);
   color: #2b2d42;
   font-size: 18px;
+  font-style: bold;
   margin-left: 5%;
   justify-content: space-around;
   align-items: center;
@@ -224,27 +220,50 @@ export default {
   color: #2b2d42;
   border-radius: 8px;
   height: 60%;
-  width: 90%;
+  width: 80%;
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   cursor: pointer;
+  padding-right: 10px;
 }
 .btn-inscription {
   background-color: #11174a;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 5px;
 }
-.btn-inscription a {
+.btn-inscription .link {
   text-decoration: none;
-  text-align: center;
+
+  color: white;
+  margin-bottom: 5px;
 }
 
 .link:hover {
   color: #e55812;
 }
+.bouton-result {
+  background-color: #11174a;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 8px;
+  margin-bottom: 5px;
+  color: white;
+  cursor: pointer;
+  justify-content: center;
+  margin-left: 115px;
+  margin-top: 5px;
+}
+
+.bouton-result:hover {
+  color: #e55812;
+}
 
 .presentation {
   background-color: #8d99aed5;
-  width: 90%;
+  width: 80%;
   height: 60%;
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;

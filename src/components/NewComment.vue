@@ -66,7 +66,8 @@ form {
   justify-content: center;
 }
 textarea {
-  width: 99%;
+  margin-left: 50px;
+  width: 400px;
   height: 30px;
   font-size: 14px;
   border-radius: 10px;

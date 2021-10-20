@@ -173,9 +173,11 @@ export default {
   margin-top: 15px;
   cursor: pointer;
   margin-bottom: 10px;
+  transition: all 1s ease-out;
 }
 .submit-button:hover {
   color: #e55812;
+  background-color: white;
 }
 
 .valid {

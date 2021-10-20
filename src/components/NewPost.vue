@@ -41,7 +41,6 @@
             placeholder="Url de l'image / facultatif"
           />
         </div>
-        {{ category }}
       </div>
 
       <button class="submit-button">Partager mon Yuck</button>
@@ -181,9 +180,11 @@ textarea::placeholder {
   font-weight: bold;
   margin-top: 15px;
   cursor: pointer;
+  transition: all 1s ease-out;
 }
 .submit-button:hover {
   color: #e55812;
+  background-color: white;
 }
 </style>
 

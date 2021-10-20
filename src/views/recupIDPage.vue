@@ -35,6 +35,7 @@ export default {
     return {
       show: false,
       posts: [],
+      idUser: this.userId,
     };
   },
   components: {
@@ -53,12 +54,13 @@ export default {
 
     const response = await fetch(url, options);
     console.log(response);
+    console.log("mounted pas encore filtre par ID");
     const data = await response.json();
     console.log(data);
     //filtre par userid
 
     const newdata = data.posts.filter(function (e) {
-      return e.userId == this.userId;
+      return e.userId === this.idUser;
     });
     //this.publications = data.posts;
     this.posts = newdata;
@@ -72,6 +74,9 @@ export default {
 .consult {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
 }
 
 .titre-profil {

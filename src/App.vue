@@ -1,37 +1,45 @@
 <template>
-  <nav id="navBar">
-    <a href="https://fontmeme.com/polices/police-funhouse/"></a>
-    <br />
-    <router-link to="/"
-      ><img
-        src="https://fontmeme.com/permalink/211014/5e53752470aaf7620f6251deba0fd4c4.png"
-        alt="police-funhouse"
-        border="0"
-    /></router-link>
-    <div class="navBar-item" v-if="!loged">
-      <router-link class="link" href="" to="/LoginPage">Connexion</router-link>
-      <router-link v-show="!this.loged" class="link" href="" to="/RegisterPage"
-        >Créer un compte</router-link
-      >
+  <div class="allo">
+    <nav id="navBar">
+      <a href="https://fontmeme.com/polices/police-funhouse/"></a>
+      <br />
+      <router-link to="/"
+        ><img
+          src="https://fontmeme.com/permalink/211014/5e53752470aaf7620f6251deba0fd4c4.png"
+          alt="police-funhouse"
+          border="0"
+      /></router-link>
+      <div class="navBar-item" v-if="!loged">
+        <router-link class="link" href="" to="/LoginPage"
+          >Connexion</router-link
+        >
+        <router-link
+          v-show="!this.loged"
+          class="link"
+          href=""
+          to="/RegisterPage"
+          >Créer un compte</router-link
+        >
+      </div>
+
+      <div class="navBar-item" v-else>
+        <a href="#" class="link" @click="logout()"> Deconnexion </a>
+
+        <router-link v-show="this.loged" class="link" href="" to="/EditProfil"
+          >Profil</router-link
+        >
+        <router-link v-show="this.loged" class="link" href="" to="/about"
+          >New yuck</router-link
+        >
+      </div>
+    </nav>
+
+    <div class="bodyPage">
+      <transition appear name="fade">
+        <router-view />
+      </transition>
+      <Footer />
     </div>
-
-    <div class="navBar-item" v-else>
-      <a href="#" class="link" @click="logout()"> Deconnexion </a>
-
-      <router-link v-show="this.loged" class="link" href="" to="/EditProfil"
-        >Profil</router-link
-      >
-      <router-link v-show="this.loged" class="link" href="" to="/about"
-        >New yuck</router-link
-      >
-    </div>
-  </nav>
-
-  <div class="bodyPage">
-    <transition appear name="fade">
-      <router-view />
-    </transition>
-    <Footer />
   </div>
 </template>
 
@@ -71,13 +79,12 @@ export default {
 .bodyPage {
   margin: 0px;
   background-image: url("./assets/Word_Art_02.jpg");
-  background-size: 29%;
+  background-size: 20%;
   margin-top: 70px;
   justify-content: center;
-  height: 700px;
 }
 #navBar {
-  position: fixed;
+  position: absolute;
   top: 2px;
   left: 5px;
   right: 5px;
