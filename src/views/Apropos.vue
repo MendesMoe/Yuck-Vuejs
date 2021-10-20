@@ -4,7 +4,7 @@
       Ca y est on y est ! Notre projet de réseau social est enfin terminé.<br />
       Il nous a bien fait marré celui la ... exaspéré même...<br />
       Et on n'a rien laché, on n'a tenu bon jusqu'au bout !<br />
-      J'espere qu'il vous plaira autant qu'il nous a fait suer...
+      J'espere qu'il vous plaira autant qu'il nous a fait suer... QRTHURR
     </p>
 
     <div>
