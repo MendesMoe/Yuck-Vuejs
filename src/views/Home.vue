@@ -13,19 +13,17 @@
               id="select"
               name="type"
               v-model="categorychoice"
-              @click="filter"
+              @change="filter"
             >
               <option disabled value="">
                 - thematiques les plus populaires -
               </option>
-              <option id="travail" value="Travail">Au travail</option>
-              <option id="transport" value="Transports">
+              <option id="Travail" value="Travail">Au travail</option>
+              <option id="Transport" value="Transports">
                 Dans les transports
               </option>
-              <option id="couple" value="Couple">En couple</option>
-              <option id="couple" value="Etudes">Etudes</option>
-
-              <option value="autre">Autre</option>
+              <option id="Couple" value="Couple">En couple</option>
+              <option id="Etudes" value="Etudes">Etudes</option>
             </select>
           </div>
         </div>
@@ -156,7 +154,7 @@ export default {
       const data = await response.json();
       console.log(data);
       this.publications = data.posts;
-      console.log("Voici le tab publications");
+      console.log("Voici le tab publications filtre");
       console.log(this.publications);
     },
   },

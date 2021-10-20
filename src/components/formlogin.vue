@@ -6,7 +6,7 @@
       <br />
       <label class="text-input-label">PASSWORD</label>
 
-      <input type="text" placeholder="Password" v-model="password" />
+      <input type="password" placeholder="Password" v-model="password" />
       <br />
       <p>J'ai oublié mon mot de passe</p>
       <router-link class="link" href="" to="/"

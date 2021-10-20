@@ -3,8 +3,8 @@
     <h3 class="titre-profil">Voici le profil de :</h3>
 
     <recupId :userIdProps="userId" />
-    <button @click="this.show = !this.show">Voir les posts</button>
-    <div v-show="this.show">
+    <!--<button @click="this.show = !this.show">Voir les posts</button> v-show="this.show"-->
+    <div>
       <Post
         v-for="(item, index) in posts"
         :key="index"
@@ -24,7 +24,7 @@
 </template>
 <script>
 import recupId from "@/components/recupId.vue";
-import Post from "../components/Post.vue";
+import Post from "@/components/Post.vue";
 
 export default {
   name: "recupIDPage",
@@ -55,12 +55,14 @@ export default {
     console.log(response);
     const data = await response.json();
     console.log(data);
-    const newdata = data.posts.filter(function (item) {
-      return item.userId == this.userId;
+    //filtre par userid
+
+    const newdata = data.posts.filter(function (e) {
+      return e.userId == this.userId;
     });
     //this.publications = data.posts;
     this.posts = newdata;
-    console.log("Voici le tab publications");
+    console.log("Voici le tab posts filtre par ID");
     console.log(this.posts);
   },
 };

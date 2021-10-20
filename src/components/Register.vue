@@ -45,7 +45,7 @@
 
       <label class="text-input-label" for="password">PASSWORD</label>
       <input
-        type="text"
+        type="password"
         name="password"
         id="password"
         placeholder="Password"
