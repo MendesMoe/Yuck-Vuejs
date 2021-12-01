@@ -38,11 +38,8 @@
           :authorP="item.lastname"
           :commentsP="item.comments"
           :postId="item._id"
-          :likesP="item.likes.length"
-          :neutralP="item.neutralReactions.length"
           :dateP="item.date"
           :userId="item.userId"
-          :imgP="item.imageUrl"
         />
       </div>
     </div>
